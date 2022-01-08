@@ -1,0 +1,29 @@
+<div class="content">
+  <div class="tree">
+    <div class="lvl" *ngFor="let level of levels; let i =index">
+      <ng-container *ngFor="let user of users">
+        <div  *ngIf="user.level == i+1">
+          <div class="node">
+           <span class="code"> {{user.code}}</span>
+           <span class="code">{{user.name|titlecase}}</span>
+           <span class="parent"> {{user.parent}}</span>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="lvl" *ngFor="let level of levels; let i =index"> -->
+  <!-- <app-level [obj]="obj">
+  </app-level> -->
+  <!-- </div> -->
+<!-- <app-level [obj]="obj">
+  <app-level [obj]="obj">
+    <app-level [obj]="obj">
+    </app-level>
+  </app-level>
+</app-level> -->
+
+<!-- <app-level [node]="obj">
+</app-level> -->
